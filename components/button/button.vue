@@ -35,6 +35,8 @@ const buttonClasses = [
         'bg-moo-blue-medium text-white': props.variant === 'blue',
         'bg-moo-black-jam text-white': props.variant === 'black',
         'bg-white text-moo-black-jam': props.variant === 'white',
+        'px-12': props.variant === 'white' || props.variant === 'white',
+        'px-4': props.variant === 'white',
     }
 ];
 </script>

@@ -1,17 +1,16 @@
 <template>
-  <div>
-    <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
+  <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
 
-    <Body>
-      <!-- <LangSwitcher /> -->
-      <Navbar />
-      <div>
-        <slot />
-      </div>
-    </Body>
+  <Body class="bg-moo-black-jam">
+    <!-- <LangSwitcher /> -->
+    <Navbar />
+    <div>
+      <slot />
+    </div>
+    <Footer />
+  </Body>
 
-    </Html>
-  </div>
+  </Html>
 </template>
 
 <script lang="ts" setup>

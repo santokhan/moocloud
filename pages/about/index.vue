@@ -1,8 +1,4 @@
-<template>
-  <div class="text-red-500">
-    About page
-  </div>
-</template>
+<template></template>
 
 <script lang="ts" setup>
 

@@ -1,5 +1,5 @@
 <template>
-    <component :is="variant" :class="`font-bold mb-${getMargin()} text-${getFontSize()}`">
+    <component :is="variant" :class="`font-bold mb-${getMargin()} text-${getFontSize()} leading-relaxed`">
         <slot></slot>
     </component>
 </template>
