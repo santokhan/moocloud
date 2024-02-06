@@ -7,12 +7,9 @@
                 <Button variant="white">START NOW</Button>
             </div>
             <div class="p-4 border rounded-lg flex flex-col gap-3 items-start bg-gray-100" title="Typography">
-                <Heading variant="h6">Typography</Heading>
-                <Heading variant="h5">Typography</Heading>
-                <Heading variant="h4">Typography</Heading>
-                <Heading variant="h3">Typography</Heading>
-                <Heading variant="h2">Typography</Heading>
-                <Heading variant="h1">Typography</Heading>
+                <Heading v-for="(item, index) in ['h6', 'h5', 'h4', 'h3', 'h2', 'h1']" :key="index" :variant="item">
+                    Typography
+                </Heading>
             </div>
             <div class="p-4 border rounded-lg flex flex-col gap-3 items-start bg-gray-100">
                 <div class="grid grid-cols-2 gap-4 items-start">
