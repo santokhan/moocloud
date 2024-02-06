@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import Navbar from '~/blocks/navbar/navbar.vue';
+import Navbar from '~/components/navbar/navbar.vue';
 
 const head = useLocaleHead({
   addDirAttribute: true,

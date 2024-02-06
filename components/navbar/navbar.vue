@@ -37,5 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import { navList } from '~/utils/navs';
+const appConfig = useAppConfig();
+
+const navList = appConfig.navbar.navList;
 </script>
