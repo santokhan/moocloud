@@ -1,0 +1,10 @@
+/* assets/css/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-moo-gradient {
+        background: linear-gradient(90deg, #052FDB 0%, #080064 100%);
+    }
+}

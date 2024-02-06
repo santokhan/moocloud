@@ -1,16 +1,22 @@
 <template>
   <div>
     <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
-      <Body>
-        <LangSwitcher />
-        <h1>hello2</h1>
-        <div><slot /></div>
-      </Body>
+
+    <Body>
+      <!-- <LangSwitcher /> -->
+      <Navbar />
+      <div>
+        <slot />
+      </div>
+    </Body>
+
     </Html>
   </div>
 </template>
 
 <script lang="ts" setup>
+import Navbar from '~/blocks/navbar/navbar.vue';
+
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: "id",
@@ -18,6 +24,4 @@ const head = useLocaleHead({
 });
 </script>
 
-<style>
-
-</style>
+<style></style>
