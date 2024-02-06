@@ -6,8 +6,12 @@ export default defineAppConfig({
                 to: 'features'
             },
             {
-                name: 'docs',
-                to: 'docs'
+                name: 'platform',
+                to: 'platform'
+            },
+            {
+                name: 'lowCode',
+                to: 'lowcode'
             },
             {
                 name: 'contact',
