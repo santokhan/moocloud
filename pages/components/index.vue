@@ -2,32 +2,32 @@
     <Container>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
             <div class="p-4 border rounded-lg flex flex-col gap-3 items-start bg-gray-100" title="Button">
-                <ButtonDefault>TRY IT NOW</ButtonDefault>
-                <ButtonPrimary>TRY IT NOW</ButtonPrimary>
-                <ButtonSecondary>START NOW</ButtonSecondary>
+                <Button variant="blue">TRY IT NOW</Button>
+                <Button variant="black">TRY IT NOW</Button>
+                <Button variant="white">START NOW</Button>
             </div>
             <div class="p-4 border rounded-lg flex flex-col gap-3 items-start bg-gray-100" title="Typography">
-                <TypographyH6>Typography</TypographyH6>
-                <TypographyH5>Typography</TypographyH5>
-                <TypographyH4>Typography</TypographyH4>
-                <TypographyH3>Typography</TypographyH3>
-                <TypographyH2>Typography</TypographyH2>
-                <TypographyH1>Typography</TypographyH1>
+                <Heading variant="h6">Typography</Heading>
+                <Heading variant="h5">Typography</Heading>
+                <Heading variant="h4">Typography</Heading>
+                <Heading variant="h3">Typography</Heading>
+                <Heading variant="h2">Typography</Heading>
+                <Heading variant="h1">Typography</Heading>
             </div>
             <div class="p-4 border rounded-lg flex flex-col gap-3 items-start bg-gray-100">
                 <div class="grid grid-cols-2 gap-4 items-start">
                     <div
                         class="col-span-2 p-6 rounded-lg bg-moo-gradient text-white flex items-center justify-between gap-4">
-                        <TypographyH3>JAMflow platform works with everything</TypographyH3>
-                        <ButtonSecondary>START NOW</ButtonSecondary>
+                        <Heading variant="h3">JAMflow platform works with everything</Heading>
+                        <Button variant="white">START NOW</Button>
                     </div>
                     <div class="space-y-6 p-6 rounded-lg bg-moo-gradient text-white">
-                        <TypographyH3>JAMflow platform works with everything</TypographyH3>
-                        <ButtonSecondary>START NOW</ButtonSecondary>
+                        <Heading variant="h3">JAMflow platform works with everything</Heading>
+                        <Button variant="white">START NOW</Button>
                     </div>
                     <div class="space-y-6 p-6 rounded-lg bg-moo-gradient text-white">
-                        <TypographyH3>See some references</TypographyH3>
-                        <ButtonSecondary>START NOW</ButtonSecondary>
+                        <Heading variant="h3">See some references</Heading>
+                        <Button variant="white">START NOW</Button>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <div class="w-full h-full grid place-items-center p-6 rounded-lg bg-moo-gradient text-white">
                     <div class="space-y-2 text-center">
                         <p>[ JAMflow LowCode/Framework ]</p>
-                        <TypographyH2>Build your website with our Framework</TypographyH2>
+                        <Heading variant="h2">Build your website with our Framework</Heading>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                                     d="M24 6V12M42 6V12M24 54V60M42 54V60M12 24H6M12 42H6M60 24H54M60 42H54M18 54H48C49.5913 54 51.1174 53.3679 52.2426 52.2426C53.3679 51.1174 54 49.5913 54 48V18C54 16.4087 53.3679 14.8826 52.2426 13.7574C51.1174 12.6321 49.5913 12 48 12H18C16.4087 12 14.8826 12.6321 13.7574 13.7574C12.6321 14.8826 12 16.4087 12 18V48C12 49.5913 12.6321 51.1174 13.7574 52.2426C14.8826 53.3679 16.4087 54 18 54ZM24 24H42V42H24V24Z"
                                     stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            <TypographyH3>Agency Lorem {{ item }}</TypographyH3>
+                            <Heading variant="h3">Agency Lorem {{ item }}</Heading>
                             <p class="text-gray-300">
                                 Lorem ipsum dolor sit amet consectetur. Dignissim feugiat pellentesque vel dolor mauris
                                 mollis amet nunc. In porttitor pharetra molestie venenatis tortor vitae.
