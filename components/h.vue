@@ -13,41 +13,27 @@ const props = defineProps({
 });
 
 const getMargin = () => {
-    switch (props.variant) {
-        case 'h1':
-            return 'mb-2';
-        case 'h2':
-            return 'mb-2';
-        case 'h3':
-            return 'mb-1';
-        case 'h4':
-            return 'mb-1';
-        case 'h5':
-            return 'mb-0.5';
-        case 'h6':
-            return 'mb-0.5';
-        default:
-            return '';
-    }
+    const marginValues: Record<string, string> = {
+        h1: 'mb-3',
+        h2: 'mb-2.5',
+        h3: 'mb-2',
+        h4: 'mb-1.5',
+        h5: 'mb-1',
+        h6: 'mb-0.5',
+    };
+    return marginValues[props.variant] || '';
 };
 
 const getFontSize = () => {
-    switch (props.variant) {
-        case 'h1':
-            return 'text-6xl';
-        case 'h2':
-            return 'text-5xl';
-        case 'h3':
-            return 'text-xl';
-        case 'h4':
-            return 'text-lg';
-        case 'h5':
-            return 'text-base';
-        case 'h6':
-            return 'text-sm';
-        default:
-            return '';
-    }
+    const variantToSizeMap: Record<string, string> = {
+        h1: 'text-6xl',
+        h2: 'text-5xl',
+        h3: 'text-2xl',
+        h4: 'text-xl',
+        h5: 'text-lg',
+        h6: 'text-sm',
+    };
+    return variantToSizeMap[props.variant] || '';
 };
 </script>
   
