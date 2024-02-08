@@ -3,7 +3,5 @@
         <slot name="header"></slot>
         <hr class="border-t border-moo-blue-low opacity-60" />
         <slot name="main"></slot>
-        <div class="py-4"></div>
-        <slot name="footer"></slot>
     </div>
 </template>

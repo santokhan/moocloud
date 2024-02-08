@@ -107,8 +107,8 @@
       </ComponentBox>
       <ComponentBox>
         <Accordion v-for="(accordion, index) in faqs" :key="index">
-          <template #default>{{ accordion.summary }}</template>
-          <template #details>{{ accordion.details }}</template>
+          <template #default>{{ accordion.label }}</template>
+          <template #details>{{ accordion.content }}</template>
         </Accordion>
       </ComponentBox>
       <ComponentBox class="lg:col-span-2 space-y-2">
@@ -131,16 +131,34 @@
 </template>
 
 <script lang="ts" setup>
-const appConfig = useAppConfig();
-const faqs = appConfig.faqs.accordions;
-const features = appConfig.features.data;
+const features = [
+  {
+    title: "Agency Lorem",
+    description: "Lorem ipsum dolor sit amet consectetur. Dignissim feugiat pellentesque vel dolor mauris mollis amet nunc."
+  },
+  {
+    title: "Agency Lorem",
+    description: "Lorem ipsum dolor sit amet consectetur. Dignissim feugiat pellentesque vel dolor mauris mollis amet nunc."
+  },
+  {
+    title: "Agency Lorem",
+    description: "Lorem ipsum dolor sit amet consectetur. Dignissim feugiat pellentesque vel dolor mauris mollis amet nunc."
+  },
+]
 
-const pricing = {
-  features: [
-    "2 vCPU Xeon",
-    "2GB RAM DDR4",
-    "40GB SSSD NVMe",
-    "120 Visite/min",
-  ]
-}
+const faqs = [
+  {
+    label: 'Getting Started',
+    // defaultOpen: true,
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.'
+  },
+  {
+    label: 'Theming',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.'
+  },
+  {
+    label: 'Layouts',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.'
+  },
+]
 </script>

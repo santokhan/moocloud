@@ -10,9 +10,8 @@
       <main>
         <slot />
       </main>
-      <footer class="bg-moo-black-jam text-moo-bkg">
+      <footer class="text-moo-bkg">
         <FooterNav />
-        <Copyright />
       </footer>
     </Body>
 
