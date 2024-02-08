@@ -1,5 +1,5 @@
 <template>
-    <Container class="py-14">
+    <Container class="py-8 lg:py-14">
         <div class="space-y-2 text-moo-bkg">
             <div class="space-y-2 max-w-2xl">
                 <slot name="headings"></slot>

@@ -1,5 +1,5 @@
 <template>
-    <Container class="py-14">
+    <Container class="py-8 lg:py-14">
         <div
             class="w-full h-full flex flex-col items-center px-4 py-12 h-96 rounded-lg bg-moo-gradient text-white text-center">
             <slot></slot>
