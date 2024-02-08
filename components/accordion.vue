@@ -1,5 +1,5 @@
 <template>
-    <details class="text-moo-bkg">
+    <details class="w-full text-moo-bkg">
         <summary
             class="border-2 rounded-lg border-moo-blue-low flex w-full items-center justify-between p-4 py-4 text-left font-medium">
             <slot></slot>
