@@ -1,5 +1,5 @@
 <template>
-    <component :is="variant" :class="`font-bold mb-${getMargin()} text-${getFontSize()} leading-tight`">
+    <component :is="variant" class="font-bold leading-tight" :class="[getMargin(), getFontSize()]">
         <slot></slot>
     </component>
 </template>
@@ -15,38 +15,38 @@ const props = defineProps({
 const getMargin = () => {
     switch (props.variant) {
         case 'h1':
-            return '2';
+            return 'mb-2';
         case 'h2':
-            return '2';
+            return 'mb-2';
         case 'h3':
-            return '1';
+            return 'mb-1';
         case 'h4':
-            return '1';
+            return 'mb-1';
         case 'h5':
-            return '0.5';
+            return 'mb-0.5';
         case 'h6':
-            return '0.5';
+            return 'mb-0.5';
         default:
-            return '0';
+            return '';
     }
 };
 
 const getFontSize = () => {
     switch (props.variant) {
         case 'h1':
-            return '6xl';
+            return 'text-6xl';
         case 'h2':
-            return '5xl';
+            return 'text-5xl';
         case 'h3':
-            return 'xl';
+            return 'text-xl';
         case 'h4':
-            return 'lg';
+            return 'text-lg';
         case 'h5':
-            return 'base';
+            return 'text-base';
         case 'h6':
-            return 'sm';
+            return 'text-sm';
         default:
-            return '0';
+            return '';
     }
 };
 </script>
