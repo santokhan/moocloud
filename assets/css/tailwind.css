@@ -1,5 +1,29 @@
 /* assets/css/tailwind.css */
 @tailwind base;
+
+
+@layer base {
+    details[open] {
+        @apply bg-moo-blue-low text-moo-bkg overflow-hidden rounded-lg shadow-lg;
+    }
+
+    details[open] svg.minus {
+        display: block;
+    }
+
+    details[open] svg.plus {
+        display: none;
+    }
+
+    details:not([open]) svg.plus {
+        display: block;
+    }
+
+    details:not([open]) svg.minus {
+        display: none;
+    }
+}
+
 @tailwind components;
 @tailwind utilities;
 

@@ -3,7 +3,7 @@ export default defineAppConfig({
         navList: [
             {
                 name: 'features',
-                to: 'features'
+                to: '/'
             },
             {
                 name: 'platform',

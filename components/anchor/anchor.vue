@@ -17,6 +17,10 @@ const props = defineProps({
         type: String,
         default: 'outline-white' as Variant // Default variant
     },
+    size: {
+        type: String,
+        default: 'small' as Size // Default variant
+    },
     to: {
         type: String,
         default: ""
@@ -31,11 +35,12 @@ const linkClasses = [
     'flex gap-1 items-center',
     'hover:brightness-90',
     {
-        'bg-moo-blue-medium text-white px-12': props.variant === 'blue',
-        'bg-moo-black-jam text-white': props.variant === 'black',
-        'bg-bkg text-moo-black-jam px-4': props.variant === 'white',
+        'bg-moo-blue-medium text-white px-12 py-2.5': props.variant === 'blue',
+        'bg-moo-black-jam text-white px-12 py-2.5': props.variant === 'black',
+        'bg-bkg text-moo-black-jam px-4 py-2.5': props.variant === 'white',
         'border-2 border-white px-4 py-1': props.variant === 'outline-white',
     },
+    props.variant === 'outline-white' ? props.size === 'small' ? 'py-1' : 'py-2' : '',
 ];
 </script>
   

@@ -1,14 +1,10 @@
 <template>
-    <Container class="py-14">
-        <Hero />
-    </Container>
-    <Container class="py-14">
-        <Features />
-    </Container>
-    <Branding />
+    <Hero />
+    <Features />
+    <Faqs />
     <Container class="py-14">
         <FooterBanner>
-            <H variant="h3" class="text-4xl max-w-xl">
+            <H variant="h3" class="max-w-xl">
                 A platform to build your network as agile as your business. See it in action
             </H>
             <Button variant="white" class="">taka a tour</Button>
