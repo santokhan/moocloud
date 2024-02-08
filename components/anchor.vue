@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink to="" :class="linkClasses">
+    <NuxtLink to="" :class="linkClasses" class="text-sm font-semibold uppercase rounded-md shadow-lg whitespace-nowrap flex gap-1 items-center hover:brightness-90">
         <slot></slot>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-4 h-4 text-white">
@@ -28,12 +28,6 @@ const props = defineProps({
 });
 
 const linkClasses = [
-    'text-sm font-semibold uppercase',
-    'rounded-md',
-    'shadow-lg',
-    'whitespace-nowrap',
-    'flex gap-1 items-center',
-    'hover:brightness-90',
     {
         'bg-moo-blue-medium text-white px-12 py-2.5': props.variant === 'blue',
         'bg-moo-black-jam text-white px-12 py-2.5': props.variant === 'black',
