@@ -91,10 +91,9 @@
           <template #main>
             <Text>This plan Includes</Text>
             <ul role="list" class="my-7 space-y-5">
-              <PricingFeature>2 vCPU Xeon</PricingFeature>
-              <PricingFeature>2GB RAM DDR4</PricingFeature>
-              <PricingFeature>40GB SSSD NVMe</PricingFeature>
-              <PricingFeature>120 Visite/min</PricingFeature>
+              <PricingFeature v-for="(feature, index) in pricing.features" :key="index">
+                {{ feature }}
+              </PricingFeature>
             </ul>
           </template>
           <template #footer>
@@ -111,8 +110,7 @@
         <Text>
           Build and manage ultra-fast websites with ease thanks to the constant support of our technicians.
           Simplify the management of your digital office and streamline your workflow with MooCloud. It's
-          almost
-          as easy as drinking a glass of milk!
+          almost as easy as drinking a glass of milk!
         </Text>
       </template>
     </Branding>
@@ -126,7 +124,6 @@
           <template #default>{{ accordion.summary }}</template>
           <template #details>{{ accordion.details }}</template>
         </Accordion>
-
         <Text>For more information, check out our docs.</Text>
       </template>
     </Faqs>
@@ -157,6 +154,15 @@
 const appConfig = useAppConfig();
 const faqs = appConfig.faqs.accordions;
 const features = appConfig.features.data;
+
+const pricing = {
+  features: [
+    "2 vCPU Xeon",
+    "2GB RAM DDR4",
+    "40GB SSSD NVMe",
+    "120 Visite/min",
+  ]
+}
 </script>
 
 <style scoped></style>
