@@ -1,22 +1,24 @@
 <template>
-    <nav class="h-16 md:h-16 relative bg-moo-blue-medium text-white">
-        <Container class="h-full flex flex-wrap items-center justify-between">
+    <UHeader :ui="{
+        wrapper: 'bg-moo-blue-medium border-none sticky top-0 z-50',
+        container: 'flex jusitfy-between px-4',
+        right: 'flex items-center justify-end'
+    }">
+        <template #logo>
             <Logo />
-            <div class="hidden w-full h-full md:flex md:items-center md:justify-between md:w-auto md:order-1">
-                <ul class="h-full flex items-center gap-8 font-medium py-3">
-                    <li v-for="(item, index) in navList" :key="index" class="flex items-center h-full">
-                        <NuxtLink :to="item.to"
-                            class="hover:bg-gray-100 md:hover:bg-transparent capitalize w-full flex items-center">
-                            {{ item.name }}
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <Anchor to="/auth/login" variant="outline-white">LOGIN</Anchor>
-                    </li>
-                </ul>
+        </template>
+        <template #right>
+            <UIcon name="i-heroicons-bars-2" class="block lg:hidden text-white w-10 h-10" />
+            <div class="hidden lg:flex items-center gap-8">
+                <UHeaderLinks :links="navList" :ui="{
+                    wrapper: 'flex items-center gap-8',
+                    base: 'text-white text-base capitalize',
+                    inactive: ' hover:text-white/75',
+                }" />
+                <Anchor to="/auth/login" variant="outline-white">LOGIN</Anchor>
             </div>
-        </Container>
-    </nav>
+        </template>
+    </UHeader>
 </template>
 
 <script setup lang="ts">
