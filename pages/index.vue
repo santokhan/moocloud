@@ -202,7 +202,6 @@
         </Accordion>
         <Text>For more information, check out our docs.</Text>
 
-        <!-- 
         <UAccordion :items="faqs" class="space-y-4" color="">
           <template #default="{ item, open }">
             <UButton
@@ -221,8 +220,7 @@
           <template #item="{ item }">
             <Text>{{ item.content }}</Text>
           </template>
-        </UAccordion> 
-        -->
+        </UAccordion>
       </template>
     </Faqs>
 
