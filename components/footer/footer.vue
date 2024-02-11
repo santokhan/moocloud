@@ -15,7 +15,7 @@
         <Container>
             <div class="flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between">
                 <Logo />
-                <span class="text-sm text-gray-500 sm:text-center text-moo-bkg"><a class="hover:underline"
+                <span class="text-sm+ text-gray-500 sm:text-center text-moo-bkg font-semibold"><a class="hover:underline"
                         href="https://github.com/santokhan">MooCloud</a>. by M. Rezzin Via Ripari Tondi 10 6500
                     Bellinzona</span>
             </div>
