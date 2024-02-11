@@ -10,9 +10,7 @@
       <main>
         <slot />
       </main>
-      <footer class="text-moo-bkg">
-        <FooterNav />
-      </footer>
+      <Footer />
     </Body>
 
     </Html>
