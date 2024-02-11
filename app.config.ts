@@ -2,19 +2,19 @@ export default defineAppConfig({
     navbar: {
         navList: [
             {
-                name: 'features',
+                label: 'features',
                 to: '/'
             },
             {
-                name: 'platform',
+                label: 'platform',
                 to: 'platform'
             },
             {
-                name: 'lowCode',
+                label: 'lowCode',
                 to: 'lowcode'
             },
             {
-                name: 'contact',
+                label: 'contact',
                 to: 'contact'
             },
         ]
@@ -22,213 +22,213 @@ export default defineAppConfig({
     footer: {
         navs: [
             {
-                title: "Company",
-                links: [
+                label: "Company",
+                children: [
                     {
-                        name: "About",
+                        label: "About",
                         to: "/"
                     },
                     {
-                        name: "Consulting",
+                        label: "Consulting",
                         to: "/"
                     },
                     {
-                        name: "Case Studies",
+                        label: "Case Studies",
                         to: "/"
                     },
                     {
-                        name: "Careers",
+                        label: "Careers",
                         to: "/"
                     },
                     {
-                        name: "Partners",
+                        label: "Partners",
                         to: "/"
                     },
                     {
-                        name: "OpenSource",
+                        label: "OpenSource",
                         to: "/"
                     },
                     {
-                        name: "Legal",
+                        label: "Legal",
                         to: "/"
                     },
                     {
-                        name: "Privacy Policy",
+                        label: "Privacy Policy",
                         to: "/"
                     },
                     {
-                        name: "Security",
+                        label: "Security",
                         to: "/"
                     },
                     {
-                        name: "Green Passport",
+                        label: "Green Passport",
                         to: "/"
                     },
                     {
-                        name: "Climate",
+                        label: "Climate",
                         to: "/"
                     },
                     {
-                        name: "Nonprofits",
-                        to: "/"
-                    },
-                ]
-            },
-            {
-                title: "Company",
-                links: [
-                    {
-                        name: "About",
-                        to: "/"
-                    },
-                    {
-                        name: "Consulting",
-                        to: "/"
-                    },
-                    {
-                        name: "Case Studies",
-                        to: "/"
-                    },
-                    {
-                        name: "Careers",
-                        to: "/"
-                    },
-                    {
-                        name: "Partners",
-                        to: "/"
-                    },
-                    {
-                        name: "OpenSource",
-                        to: "/"
-                    },
-                    {
-                        name: "Legal",
-                        to: "/"
-                    },
-                    {
-                        name: "Privacy Policy",
-                        to: "/"
-                    },
-                    {
-                        name: "Security",
-                        to: "/"
-                    },
-                    {
-                        name: "Green Passport",
-                        to: "/"
-                    },
-                    {
-                        name: "Climate",
-                        to: "/"
-                    },
-                    {
-                        name: "Nonprofits",
+                        label: "Nonprofits",
                         to: "/"
                     },
                 ]
             },
             {
-                title: "Company",
-                links: [
+                label: "Company",
+                children: [
                     {
-                        name: "About",
+                        label: "About",
                         to: "/"
                     },
                     {
-                        name: "Consulting",
+                        label: "Consulting",
                         to: "/"
                     },
                     {
-                        name: "Case Studies",
+                        label: "Case Studies",
                         to: "/"
                     },
                     {
-                        name: "Careers",
+                        label: "Careers",
                         to: "/"
                     },
                     {
-                        name: "Partners",
+                        label: "Partners",
                         to: "/"
                     },
                     {
-                        name: "OpenSource",
+                        label: "OpenSource",
                         to: "/"
                     },
                     {
-                        name: "Legal",
+                        label: "Legal",
                         to: "/"
                     },
                     {
-                        name: "Privacy Policy",
+                        label: "Privacy Policy",
                         to: "/"
                     },
                     {
-                        name: "Security",
+                        label: "Security",
                         to: "/"
                     },
                     {
-                        name: "Green Passport",
+                        label: "Green Passport",
                         to: "/"
                     },
                     {
-                        name: "Climate",
+                        label: "Climate",
                         to: "/"
                     },
                     {
-                        name: "Nonprofits",
+                        label: "Nonprofits",
                         to: "/"
                     },
                 ]
             },
             {
-                title: "Company",
-                links: [
+                label: "Company",
+                children: [
                     {
-                        name: "About",
+                        label: "About",
                         to: "/"
                     },
                     {
-                        name: "Consulting",
+                        label: "Consulting",
                         to: "/"
                     },
                     {
-                        name: "Case Studies",
+                        label: "Case Studies",
                         to: "/"
                     },
                     {
-                        name: "Careers",
+                        label: "Careers",
                         to: "/"
                     },
                     {
-                        name: "Partners",
+                        label: "Partners",
                         to: "/"
                     },
                     {
-                        name: "OpenSource",
+                        label: "OpenSource",
                         to: "/"
                     },
                     {
-                        name: "Legal",
+                        label: "Legal",
                         to: "/"
                     },
                     {
-                        name: "Privacy Policy",
+                        label: "Privacy Policy",
                         to: "/"
                     },
                     {
-                        name: "Security",
+                        label: "Security",
                         to: "/"
                     },
                     {
-                        name: "Green Passport",
+                        label: "Green Passport",
                         to: "/"
                     },
                     {
-                        name: "Climate",
+                        label: "Climate",
                         to: "/"
                     },
                     {
-                        name: "Nonprofits",
+                        label: "Nonprofits",
+                        to: "/"
+                    },
+                ]
+            },
+            {
+                label: "Company",
+                children: [
+                    {
+                        label: "About",
+                        to: "/"
+                    },
+                    {
+                        label: "Consulting",
+                        to: "/"
+                    },
+                    {
+                        label: "Case Studies",
+                        to: "/"
+                    },
+                    {
+                        label: "Careers",
+                        to: "/"
+                    },
+                    {
+                        label: "Partners",
+                        to: "/"
+                    },
+                    {
+                        label: "OpenSource",
+                        to: "/"
+                    },
+                    {
+                        label: "Legal",
+                        to: "/"
+                    },
+                    {
+                        label: "Privacy Policy",
+                        to: "/"
+                    },
+                    {
+                        label: "Security",
+                        to: "/"
+                    },
+                    {
+                        label: "Green Passport",
+                        to: "/"
+                    },
+                    {
+                        label: "Climate",
+                        to: "/"
+                    },
+                    {
+                        label: "Nonprofits",
                         to: "/"
                     },
                 ]
