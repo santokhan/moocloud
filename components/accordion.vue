@@ -1,6 +1,6 @@
 <template>
     <!-- Accordion -->
-    <div class="w-full text-moo-bkg transition-all ease-out"
+    <div class="w-full text-moo-bkg overflow-hidden transition-[height] duration-200 ease-out"
         :class="[isOpen ? 'bg-moo-blue-low overflow-hidden rounded-lg shadow-lg' : '']">
         <!-- Summary -->
         <button @click="isOpen = !isOpen"
@@ -16,7 +16,7 @@
             </svg>
         </button>
         <!-- Content -->
-        <div v-if="isOpen" class="px-4 pb-4 transition-all ease-out from-opacity-0 to-opacity-100">
+        <div v-if="isOpen" class="px-4 pb-4 transition-all ease-in duration-[5000ms] from-height-0 to-height-auto">
             <slot name="details"></slot>
         </div>
     </div>

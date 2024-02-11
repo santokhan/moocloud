@@ -199,32 +199,26 @@
                 <H variant="h2">Frequently Asked Question</H>
             </template>
             <template #accordion>
-                <Accordion v-for="(accordion, index) in faqs" :key="index">
-                    <template #default>{{ accordion.label }}</template>
-                    <template #details>{{ accordion.content }}</template>
-                </Accordion>
-
-                <Text>For more information, check out our docs.</Text>
-
-                <UAccordion :items="faqs" class="space-y-4" color="">
+                <UAccordion :items="faqs" :ui="{
+                    wrapper: 'w-full space-y-4',
+                    container: 'w-full flex flex-col space-y-4',
+                    item: {
+                        base: 'text-white bg-moo-blue-low rounded-lg',
+                        size: 'text-base',
+                        padding: 'p-4'
+                    },
+                }">
                     <template #default="{ item, open }">
                         <UButton
-                            class="rounded-lg flex items-center justify-between p-4 py-4 text-left font-medium bg-transparent border-2 border-moo-blue-low hover:bg-moo-blue-low"
+                            class="flex items-center justify-between p-4 py-4 text-left font-medium bg-transparent border-2 border-moo-blue-low hover:bg-moo-blue-low"
                             :class="[open ? 'bg-moo-blue-low' : '']">
                             <H variant="h5">{{ item.label }}</H>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8" viewBox="0 0 24 24" fill="none">
-                                <path v-if="open" d="M6 12h12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                                <path v-else d="M6 12h12M12 18V6" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
+                            <UIcon v-if="open" name="i-heroicons-minus" class="w-6 h-6" />
+                            <UIcon v-else name="i-heroicons-plus" class="w-6 h-6" />
                         </UButton>
                     </template>
-                    <template #item="{ item }">
-                        <Text>{{ item.content }}</Text>
-                    </template>
                 </UAccordion>
+                <Text>For more information, check out our docs.</Text>
             </template>
         </Faqs>
 

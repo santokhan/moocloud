@@ -43,10 +43,25 @@
         <H variant="h2">Frequently Asked Question</H>
       </template>
       <template #accordion>
-        <Accordion v-for="(accordion, index) in faqs" :key="index">
-          <template #default>{{ accordion.label }}</template>
-          <template #details>{{ accordion.content }}</template>
-        </Accordion>
+        <UAccordion :items="faqs" :ui="{
+          wrapper: 'w-full space-y-4',
+          container: 'w-full flex flex-col space-y-4',
+          item: {
+            base: 'text-white bg-moo-blue-low rounded-lg',
+            size: 'text-base',
+            padding: 'p-4'
+          },
+        }">
+          <template #default="{ item, open }">
+            <UButton
+              class="flex items-center justify-between p-4 py-4 text-left font-medium bg-transparent border-2 border-moo-blue-low hover:bg-moo-blue-low"
+              :class="[open ? 'bg-moo-blue-low' : '']">
+              <H variant="h5">{{ item.label }}</H>
+              <UIcon v-if="open" name="i-heroicons-minus" class="w-6 h-6" />
+              <UIcon v-else name="i-heroicons-plus" class="w-6 h-6" />
+            </UButton>
+          </template>
+        </UAccordion>
         <Text>For more information, check out our docs.</Text>
       </template>
     </Faqs>
