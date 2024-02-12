@@ -1,5 +1,5 @@
 <template>
-    <component :is="variant" class="font-bold leading-tight" :class="[getMargin(), getFontSize()]">
+    <component :is="variant" class="font-bold !leading-[1.35]" :class="[getMargin(), getFontSize()]">
         <slot></slot>
     </component>
 </template>
@@ -28,7 +28,7 @@ const getFontSize = () => {
     const variantToSizeMap: Record<string, string> = {
         h1: 'text-4xl lg:text-6xl',
         h2: 'text-3xl lg:text-5xl',
-        h3: 'text-xl lg:text-2xl',
+        h3: 'text-xl lg:text-4xl',
         h4: 'text-lg lg:text-xl',
         h5: 'text-base lg:text-lg',
         h6: 'text-sm',
