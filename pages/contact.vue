@@ -37,12 +37,23 @@
                 </Text>
             </template>
             <template #features>
-                <FeatureGrid class="py-12">
-                    <FeatureCard v-for="(item, index) in features" :key="index">
-                        <IconFeature />
-                        <H variant="h4">{{ item.title }} {{ index }}</H>
-                        <Text>{{ item.description }}</Text>
-                    </FeatureCard>
+                <FeatureGrid>
+                    <ULandingCard v-for="n in 9" title="JAMflow 123" color="blue"
+                        description="Lorem ipsum dolor sit amet consectetur. Dignissim feugiat pellentesque vel dolor mauris mollis amet nunc. In porttitor pharetra molestie venenatis tortor vitae."
+                        icon="i-heroicons-swatch" :ui="{
+                            wrapper: 'relative group isolate rounded-xl background-gradient-moocloud before:hidden before:lg:block before:absolute ring-0 before:-inset-[2px] before:h-[calc(100%+4px)] before:w-[calc(100%+4px)] before:z-[-1] before:rounded-[13px] flex-1 flex flex-col shadow',
+                            base: 'w-full h-full rounded-lg bg-moo-dark-jam text-moo-bkg text-center flex flex-col items-center gap-2 border-0',
+                            background: 'bg-moo-dark-jam',
+                            container: '',
+                            to: 'hover:ring-2 hover:ring-red-500 dark:hover:ring-red-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/50',
+                            icon: {
+                                wrapper: '',
+                                base: 'text-moo-bkg w-10 h-10'
+                            },
+                            title: 'text-moo-bkg',
+                            description: 'text-moo-bkg',
+                            ring: ''
+                        }" />
                 </FeatureGrid>
             </template>
         </Feature>
@@ -105,23 +116,22 @@
         </BlogPost>
 
         <Services>
-            <ServicesCard v-for="(item, index) in [1, 2]" :key="index">
+            <ServicesCard v-for="(item, index) in [1, 2]" :key="index" class="p-6 lg:p-10">
                 <template #image>
                     <DummyImage />
                 </template>
                 <template #details>
-                    <H variant="h4" class="leading-tight">Embracing Minimalism: The Art of Decluttering Your Life</H>
+                    <H variant="h2" class="leading-tight">Serverless and Scalable.</H>
                     <Text>
-                        In a world filled with constant noise and distractions, embracing minimalism has become more than
-                        just a
-                        trend; it's a lifestyle choice that can bring clarity, focus, and a sense of calm to our everyday
-                        lives. In
-                        this blog post, we'll explore the principles of minimalism and how they can help you declutter not
-                        just your
-                        physical space, but your mind and schedule as well.
+                        MooCloud new JAMflow serverless plaform allow your project to scale
+                        from o to 100 in seconds, allowing your to support high pick of
+                        demmands with no crash and offreing amazing expreriance to your
+                        visitors.
                     </Text>
-                    <Spacing size="small" />
-                    <Anchor variant="outline-white" class="w-auto" to="">CONTACT US TO BEGIN</Anchor>
+                    <Spacing size="medium" />
+                    <Anchor variant="outline-white" :is-absolute="true" to="">
+                        Find out more
+                    </Anchor>
                 </template>
             </ServicesCard>
         </Services>
@@ -203,15 +213,17 @@
                     wrapper: 'w-full space-y-4',
                     container: 'w-full flex flex-col space-y-4',
                     item: {
-                        base: 'text-white bg-moo-blue-low rounded-lg',
+                        base: 'bg-moo-blue-low rounded-lg',
                         size: 'text-base',
-                        padding: 'p-4'
+                        padding: 'p-4',
+                        color: 'text-moo-bkg'
                     },
                 }">
                     <template #default="{ item, open }">
-                        <UButton
-                            class="flex items-center justify-between p-4 py-4 text-left font-medium bg-transparent border-2 border-moo-blue-low hover:bg-moo-blue-low"
-                            :class="[open ? 'bg-moo-blue-low' : '']">
+                        <UButton size="xl" :ui="{
+                            base: `flex items-center justify-between p-4 py-4 text-left font-medium !bg-transparent dark:bg-transparent border-2 border-moo-blue-low hover:bg-moo-blue-low ${open ? '!bg-moo-blue-low' : ''}`,
+                            color: 'text-moo-bkg'
+                        }">
                             <H variant="h5">{{ item.label }}</H>
                             <UIcon v-if="open" name="i-heroicons-minus" class="w-6 h-6" />
                             <UIcon v-else name="i-heroicons-plus" class="w-6 h-6" />

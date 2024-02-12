@@ -21,7 +21,8 @@
       </div>
     </Content>
 
-    <!--     <SplitContentImage>
+    <!-- 
+    <SplitContentImage>
       <template #content>
         <H variant="h2">{{ t("ctaSelect.header") }}</H>
         <Text>
@@ -37,7 +38,8 @@
       <template #image>
         <DummyImage />
       </template>
-    </SplitContentImage> -->
+    </SplitContentImage>
+    -->
 
     <Services :divider="false" :border="false">
       <ServicesCard>
@@ -53,9 +55,7 @@
             visitors.
           </Text>
           <Spacing size="small" />
-          <Anchor variant="outline-white" class="w-auto" to=""
-            >CONTACT US TO BEGIN</Anchor
-          >
+          <Anchor variant="outline-white" class="w-auto" to="">CONTACT US TO BEGIN</Anchor>
         </template>
       </ServicesCard>
       <ServicesCard>
@@ -73,18 +73,14 @@
             expansive development experience.
           </Text>
           <Spacing size="small" />
-          <Anchor variant="outline-white" class="w-auto" to=""
-            >Find out more</Anchor
-          >
+          <Anchor variant="outline-white" class="w-auto" to="">Find out more</Anchor>
         </template>
       </ServicesCard>
     </Services>
 
     <Branding>
       <template #header>
-        <H variant="h2" class="leading-tight text-moo-bkg"
-          >JAMflow works with</H
-        >
+        <H variant="h2" class="leading-tight text-moo-bkg">JAMflow works with</H>
         <Text>
           JAMflow platfom support JAMflow LowCode and 3° party framework that
           support contenerazation, our team can help you to import your current
@@ -94,7 +90,7 @@
     </Branding>
 
     <Services>
-      <ServicesCard class="">
+      <ServicesCard v-for="(item, index) in [1, 2]" :key="index" class="p-6 lg:p-10">
         <template #image>
           <DummyImage />
         </template>
@@ -106,30 +102,10 @@
             demmands with no crash and offreing amazing expreriance to your
             visitors.
           </Text>
-          <Spacing size="small" />
+          <Spacing size="medium" />
           <Anchor variant="outline-white" :is-absolute="true" to="">
-              Find out more
-            </Anchor>
-        </template>
-      </ServicesCard>
-      <ServicesCard>
-        <template #image>
-          <DummyImage />
-        </template>
-        <template #details>
-          <H variant="h2" class="leading-tight">The LowCode Framework!</H>
-          <Text>
-            Our pre-built starter kit is designed for ease of use, requiring
-            only a basic understanding of HTML and JSON to begin crafting
-            stunning websites. However, for those with advanced JavaScript
-            skills, the full potential of the underlying framework used like
-            Vue, Nuxt and UnJS can be unlocked, offering a more powerful and
-            expansive development experience.
-          </Text>
-          <Spacing size="small" />
-          <Anchor variant="outline-white" class="w-auto" to=""
-            >Find out more</Anchor
-          >
+            Find out more
+          </Anchor>
         </template>
       </ServicesCard>
     </Services>
@@ -144,15 +120,35 @@
         </Text>
       </template>
       <template #features>
-        <FeatureGrid class="py-12">
-          <FeatureCard v-for="(item, index) in features" :key="index">
-            <IconFeature />
-            <H variant="h4">{{ item.title }} {{ index }}</H>
-            <Text>{{ item.description }}</Text>
-          </FeatureCard>
+        <FeatureGrid>
+          <!-- 
+            <FeatureCard v-for="(item, index) in features" :key="index">
+              <IconFeature />
+              <H variant="h4">{{ item.title }} {{ index }}</H>
+              <Text>{{ item.description }}</Text>
+            </FeatureCard>
+          -->
+          <ULandingCard v-for="n in 9" title="JAMflow 123" color="blue"
+            description="Lorem ipsum dolor sit amet consectetur. Dignissim feugiat pellentesque vel dolor mauris mollis amet nunc. In porttitor pharetra molestie venenatis tortor vitae."
+            icon="i-heroicons-swatch" :ui="{
+              wrapper: 'relative group isolate rounded-xl background-gradient-moocloud before:hidden before:lg:block before:absolute ring-0 before:-inset-[2px] before:h-[calc(100%+4px)] before:w-[calc(100%+4px)] before:z-[-1] before:rounded-[13px] flex-1 flex flex-col shadow',
+              base: 'w-full h-full rounded-lg bg-moo-dark-jam text-moo-bkg text-center flex flex-col items-center gap-2 border-0',
+              background: 'bg-moo-dark-jam',
+              container: '',
+              to: 'hover:ring-2 hover:ring-red-500 dark:hover:ring-red-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/50',
+              icon: {
+                wrapper: '',
+                base: 'text-moo-bkg w-10 h-10'
+              },
+              title: 'text-moo-bkg',
+              description: 'text-moo-bkg',
+              ring: ''
+            }" />
         </FeatureGrid>
       </template>
     </Feature>
+
+    <Card />
 
     <SplitContentImage>
       <template #content>
@@ -265,23 +261,25 @@
       </template>
       <template #accordion>
         <!--
-                <Accordion v-for="(accordion, index) in faqs" :key="index">
-                    <template #default>{{ accordion.label }}</template>
-                    <template #details>{{ accordion.content }}</template>
-                </Accordion>
-                -->
+        <Accordion v-for="(accordion, index) in faqs" :key="index">
+            <template #default>{{ accordion.label }}</template>
+            <template #details>{{ accordion.content }}</template>
+        </Accordion>
+        -->
         <UAccordion :items="faqs" :ui="{
           wrapper: 'w-full space-y-4',
           container: 'w-full flex flex-col space-y-4',
           item: {
-            base: 'text-white bg-moo-blue-low rounded-lg',
+            base: 'bg-moo-blue-low rounded-lg',
             size: 'text-base',
             padding: 'p-4',
+            color: 'text-moo-bkg'
           },
         }">
           <template #default="{ item, open }">
             <UButton size="xl" :ui="{
               base: `flex items-center justify-between p-4 py-4 text-left font-medium !bg-transparent dark:bg-transparent border-2 border-moo-blue-low hover:bg-moo-blue-low ${open ? '!bg-moo-blue-low' : ''}`,
+              color: 'text-moo-bkg'
             }">
               <H variant="h5">{{ item.label }}</H>
               <UIcon v-if="open" name="i-heroicons-minus" class="w-6 h-6" />
