@@ -53,9 +53,7 @@
             visitors.
           </Text>
           <Spacing size="small" />
-          <Anchor variant="outline-white" class="w-auto" to=""
-            >CONTACT US TO BEGIN</Anchor
-          >
+          <Anchor variant="outline-white" class="w-auto" to="">CONTACT US TO BEGIN</Anchor>
         </template>
       </ServicesCard>
       <ServicesCard>
@@ -73,18 +71,14 @@
             expansive development experience.
           </Text>
           <Spacing size="small" />
-          <Anchor variant="outline-white" class="w-auto" to=""
-            >Find out more</Anchor
-          >
+          <Anchor variant="outline-white" class="w-auto" to="">Find out more</Anchor>
         </template>
       </ServicesCard>
     </Services>
 
     <Feature>
       <template #headings>
-        <H variant="h2" class="leading-tight"
-          >Performance, Security, and the Swiss privacy</H
-        >
+        <H variant="h2" class="leading-tight">Performance, Security, and the Swiss privacy</H>
         <Text>
           Build and manage ultra-fast websites with ease thanks to the constant
           support of our technicians. Simplify the management of your digital
@@ -148,18 +142,14 @@
             <DummyImage class="w-full" />
           </template>
           <template #features>
-            <H variant="h4" class="leading-tight"
-              >Blog post title {{ index + 1 }}</H
-            >
+            <H variant="h4" class="leading-tight">Blog post title {{ index + 1 }}</H>
             <Text>
               Lorem ipsum dolor sit amet consectetur. Dignissim feugiat
               pellentesque vel dolor mauris
             </Text>
           </template>
           <template #footer>
-            <Anchor variant="blue" class="justify-center" to=""
-              >CONTACT US TO BEGIN</Anchor
-            >
+            <Anchor variant="blue" class="justify-center" to="">CONTACT US TO BEGIN</Anchor>
           </template>
         </Post>
       </template>
@@ -169,10 +159,8 @@
       <template #default>
         <div class="">
           <H variant="h2">Build your plan</H>
-          <Text
-            >Plans that empower you and your team to ship without
-            friction.</Text
-          >
+          <Text>Plans that empower you and your team to ship without
+            friction.</Text>
         </div>
         <H variant="h4">
           Lorem ipsum dolor sed do consectetur adipiscing sit amet elit sed do
@@ -195,9 +183,7 @@
             </ul>
             <Spacing size="small" />
             <PricingAmount>49</PricingAmount>
-            <Anchor variant="blue" class="justify-center" to=""
-              >CONTACT US TO BEGIN</Anchor
-            >
+            <Anchor variant="blue" class="justify-center" to="">CONTACT US TO BEGIN</Anchor>
           </template>
         </PricingCard>
       </template>
@@ -205,9 +191,7 @@
 
     <Branding>
       <template #header>
-        <H variant="h2" class="leading-tight text-moo-bkg"
-          >JAM flow works with</H
-        >
+        <H variant="h2" class="leading-tight text-moo-bkg">JAM flow works with</H>
         <Text>
           Build and manage ultra-fast websites with ease thanks to the constant
           support of our technicians. Simplify the management of your digital
@@ -228,23 +212,19 @@
                     <template #details>{{ accordion.content }}</template>
                 </Accordion>
                 -->
-        <UAccordion
-          :items="faqs"
-          :ui="{
-            wrapper: 'w-full space-y-4',
-            container: 'w-full flex flex-col space-y-4',
-            item: {
-              base: 'text-white bg-moo-blue-low rounded-lg',
-              size: 'text-base',
-              padding: 'p-4',
-            },
-          }"
-        >
+        <UAccordion :items="faqs" :ui="{
+          wrapper: 'w-full space-y-4',
+          container: 'w-full flex flex-col space-y-4',
+          item: {
+            base: 'text-white bg-moo-blue-low rounded-lg',
+            size: 'text-base',
+            padding: 'p-4',
+          },
+        }">
           <template #default="{ item, open }">
-            <UButton
-              class="flex items-center justify-between p-4 py-4 text-left font-medium bg-transparent border-2 border-moo-blue-low hover:bg-moo-blue-low"
-              :class="[open ? 'bg-moo-blue-low' : '']"
-            >
+            <UButton size="xl" :ui="{
+              base: `flex items-center justify-between p-4 py-4 text-left font-medium !bg-transparent dark:bg-transparent border-2 border-moo-blue-low hover:bg-moo-blue-low ${open ? '!bg-moo-blue-low' : ''}`,
+            }">
               <H variant="h5">{{ item.label }}</H>
               <UIcon v-if="open" name="i-heroicons-minus" class="w-6 h-6" />
               <UIcon v-else name="i-heroicons-plus" class="w-6 h-6" />
